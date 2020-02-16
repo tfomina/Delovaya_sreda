@@ -20,6 +20,10 @@ export const Licenses = ({ license = null, handleLicenseChange }) => {
         : state.isSelected
         ? "#007bff"
         : "#FFF"
+    }),
+    indicatorSeparator: (provided, state) => ({
+      ...provided,
+      backgroundColor: "#ced4da"
     })
   };
 

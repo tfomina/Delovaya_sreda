@@ -36,7 +36,7 @@ export const App = () => {
 
       const licenseKey = (license && license.key) || "";
 
-      const url = `https://api.github.com/search/repositories?q=${debouncedNameSearch}+in:name+language:javascript+created:${prevMonth}${
+      const url = `https://api.github.com/search/repositories?q=${debouncedNameSearch}+in:name+language:javascript+created:>${prevMonth}${
         licenseKey ? `+license:${licenseKey}` : ""
       }&sort=stars&order=desc&page=${currentPage}&per_page=${PER_PAGE}`;
 

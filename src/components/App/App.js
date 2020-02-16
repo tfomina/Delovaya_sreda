@@ -23,7 +23,7 @@ export const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [total, setTotal] = useState(0);
 
-  const [debouncedNameSearch] = useDebounce(nameSearch, 250);
+  const [debouncedNameSearch] = useDebounce(nameSearch, 500);
 
   const fetchData = useCallback(async () => {
     setHasError(false);

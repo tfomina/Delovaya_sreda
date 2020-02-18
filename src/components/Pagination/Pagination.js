@@ -5,7 +5,7 @@ import Pagination from "react-pagination-bootstrap";
 export const AppPagination = ({
   currentPage = 0,
   itemsPerPage,
-  total,
+  total = 0,
   handlePageChange
 }) =>
   total ? (

@@ -5,7 +5,6 @@ export const Search = ({ handleNameSearchChange, nameSearch }) => (
   <div className="flex-grow-1 mx-lg-3 mb-4 mb-lg-0">
     <input
       type="text"
-      name="search"
       placeholder="Поиск по названию репозитория"
       onChange={e => handleNameSearchChange(e.target.value)}
       className="form-control"

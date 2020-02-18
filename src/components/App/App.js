@@ -14,6 +14,8 @@ import "./App.css";
 
 const PER_PAGE = 20;
 
+const BASE_URL = "https://api.github.com/search/repositories";
+
 const initialState = {
   data: [],
   isLoading: false,
@@ -100,7 +102,7 @@ export const App = () => {
 
       const licenseKey = (license && license.key) || "";
 
-      const url = `https://api.github.com/search/repositories?q=${debouncedNameSearch}+in:name+language:javascript+created:>=${prevMonth}${
+      const url = `${BASE_URL}?q=${debouncedNameSearch}+in:name+language:javascript+created:>=${prevMonth}${
         licenseKey ? `+license:${licenseKey}` : ""
       }&sort=stars&order=desc&page=${currentPage}&per_page=${PER_PAGE}`;
 
